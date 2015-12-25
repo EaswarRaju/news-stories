@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>News Stories</title>
+    <link href="vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="app/css/main.css" rel="stylesheet">
+  </head>
+  <body data-ng-app="newsLister">
+    <div class="container" data-ng-view>
+    </div>
+
+    <!-- angular framework scripts -->
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="vendor/angular-route/angular-route.min.js"></script>
+    <!-- --- -->
+
+    <!-- scripts related to application -->
+    <script src="app/js/app.js"></script>
+    <script src="app/js/newslister.service.js"></script>
+    <script src="app/js/newslister.results.controller.js"></script>
+    <script src="app/js/newslister.home.controller.js"></script>
+
+  </body>
+</html>

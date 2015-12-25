@@ -1,0 +1,13 @@
+{
+  "name": "news-stories",
+  "authors": [
+    "Easwar Raju <easwarraju.it@gmail.com>"
+  ],
+  "description": "Simple Angular JS example application",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.1.0",
+	"angular" : "1.4.8"
+  }
+}

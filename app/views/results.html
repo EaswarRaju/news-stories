@@ -1,0 +1,15 @@
+<h3>Results for {{resultData.searchTerm}}</h3>
+<ul class="media-list row contacts-container">
+    <li class="media col-md-12" data-ng-repeat="result in resultData.results">
+        <div class="thumbnail col-md-3">
+            <a data-ng-href="{{result.webUrl}}">
+                <img alt="article image" class="media-object" data-ng-src="{{result.thumbnail ? result.thumbnail : 'https://git.reviewboard.kde.org/media/uploaded/files/2015/07/18/a70d8ab6-1bbf-4dcc-b11f-524c2f56b14a__picture_default_cover.jpg'}}" />
+            </a>
+        </div>
+        <div class="media-heading col-md-6">
+            <a data-ng-href="{{result.webUrl}}"><h4>{{result.webTitle}}</h4></a>
+        </div>
+        <hr class="col-md-9">
+    </li>
+</ul>
+<p ng-if="!resultData.results.length">No results found.</p>
