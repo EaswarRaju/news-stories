@@ -12,7 +12,6 @@
         var showResults = function(response){
             newsListerService.resultsData = response.data.response;
             newsListerService.resultsData.searchTerm = $scope.searchText;
-            console.log(newsListerService.resultsData);
             $location.path('/results');
         };
 
