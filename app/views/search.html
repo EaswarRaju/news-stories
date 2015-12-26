@@ -5,6 +5,7 @@
         <div class="col-sm-6">
             <input type="text" id="searchTxt" name="searchTxt" class="form-control contact-name-input" data-ng-model="searchText" required />
             <span class="text-danger" data-ng-show="searchSubmitted && searchForm.searchTxt.$error.required">You must enter a search text.</span>
+            <span class="text-danger" data-ng-show="showErrMessage">There seems to be a problem. Please try again.</span>
         </div>
     </div>
     <div class="form-group">

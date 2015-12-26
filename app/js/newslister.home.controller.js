@@ -23,7 +23,7 @@
         $scope.getResults = function(){
             $scope.searchSubmitted = true;
             if ($scope.searchText){
-                newsListerService.getArticles($scope.searchText).then(showResults, showError);
+                newsListerService.getArticles($scope.searchText, 1).then(showResults, showError);
             }
         };
 

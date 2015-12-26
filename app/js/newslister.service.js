@@ -9,9 +9,9 @@
             searchTerm : ''
         };
 
-        this.getArticles = function(searchTerm){
+        this.getArticles = function(searchTerm, pageNumber){
             return $http({
-                url : 'http://content.guardianapis.com/search?api-key=test&q=' + searchTerm + '&showfields=thumbnail,headline&show-tags=keyword&page=1&page-size=10',
+                url : 'http://content.guardianapis.com/search?api-key=test&q=' + searchTerm + '&showfields=thumbnail,headline&show-tags=keyword&page=' + pageNumber + '&page-size=10',
                 method : 'get'
             });
         };

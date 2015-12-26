@@ -12,4 +12,35 @@
         <hr class="col-md-9">
     </li>
 </ul>
+
+<div class="row" ng-show="resultData.results.length">
+    <nav class="pull-right col-md-5">
+        <ul class="pagination">
+            <li data-ng-class="{'disabled' : resultData.currentPage === 1}">
+                <a href="javascript:void(0)" data-ng-click="getResults(resultData.searchTerm, resultData.currentPage - 1)">Prev</a>
+            </li>
+            <li data-ng-class="{active : resultData.currentPage === 1}">
+                <a href="javascript:void(0)" data-ng-click="getResults(resultData.searchTerm, 1)">1</a>
+            </li>
+            <li data-ng-show="resultData.pages > 1" data-ng-class="{active : resultData.currentPage === 2}">
+                <a href="javascript:void(0)" data-ng-click="getResults(resultData.searchTerm, 2)">2</a>
+            </li>
+            <li class="disabled" data-ng-show="resultData.pages > 4"><a href="javascript:void(0)">...</a></li>
+            <li data-ng-show="resultData.pages > 4 && resultData.currentPage > 2 && resultData.currentPage < resultData.pages - 1" class="active">
+                <a href="javascript:void(0)">{{resultData.currentPage}}</a>
+            </li>
+            <li class="disabled" data-ng-show="resultData.pages > 4 && resultData.currentPage > 2 && resultData.currentPage < resultData.pages - 1"><a href="javascript:void(0)">...</a></li>
+            <li data-ng-show="resultData.pages > 3" data-ng-class="{active : resultData.currentPage === resultData.pages - 1}">
+                <a href="javascript:void(0)" data-ng-click="getResults(resultData.searchTerm, resultData.pages - 1)">{{resultData.pages - 1}}</a>
+            </li>
+            <li data-ng-show="resultData.pages > 2" data-ng-class="{active : resultData.currentPage === resultData.pages}">
+                <a href="javascript:void(0)" data-ng-click="getResults(resultData.searchTerm, resultData.pages)">{{resultData.pages}}</a>
+            </li>
+            <li data-ng-class="{'disabled' : resultData.currentPage === resultData.pages}">
+                <a href="javascript:void(0)" data-ng-click="getResults(resultData.searchTerm, resultData.currentPage + 1)">Next</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
 <p ng-if="!resultData.results.length">No results found.</p>
