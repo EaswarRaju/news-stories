@@ -8,6 +8,12 @@
         </div>
         <div class="media-heading col-md-6">
             <a data-ng-href="{{result.webUrl}}"><h4>{{result.webTitle}}</h4></a>
+            <br/>
+            <ul class="nav nav-pills">
+                <li role="presentation" data-ng-repeat="keyworTag in result.tags">
+                    <a href="javascript:void(0)" data-ng-click="getResults(keyworTag.webTitle, 1)">{{keyworTag.webTitle}}</a>
+                </li>
+            </ul>
         </div>
         <hr class="col-md-9">
     </li>
